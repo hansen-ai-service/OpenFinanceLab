@@ -1,0 +1,25 @@
+transaction_id,transaction_date,type,amount,currency,category,description,counterparty,payment_method
+REV0001,2022-02-21,revenue,1968.93,USD,product_sales,Bulk order,Brightside LLC,bank_transfer
+REV0002,2022-03-30,revenue,169.54,USD,subscriptions,Monthly plan,Northwind Co,card
+REV0003,2022-07-09,revenue,1020.95,USD,product_sales,Starter kit order,Maple Retail,cash
+REV0004,2023-04-22,revenue,2949.51,USD,services,Training session,Acme Corp,other
+REV0005,2023-11-28,revenue,202.10,USD,other_revenue,Referral bonus,Brightside LLC,cash
+REV0006,2024-02-18,revenue,753.69,USD,product_sales,Bulk order,,cash
+REV0007,2024-07-08,revenue,3389.44,USD,services,Website build,Acme Corp,bank_transfer
+REV0008,2025-04-24,revenue,1131.04,USD,product_sales,Starter kit order,Acme Corp,card
+REV0009,2025-07-11,revenue,137.50,USD,subscriptions,Monthly plan,,card
+REV0010,2025-09-16,revenue,622.42,USD,product_sales,Bulk order,Acme Corp,bank_transfer
+REV0011,2026-01-06,revenue,3707.26,USD,services,Training session,Cedar Supply,check
+REV0012,2026-02-17,revenue,837.36,USD,services,Training session,,other
+EXP0001,2022-03-07,expense,113.36,USD,other_expense,Misc expense,AdReach,card
+EXP0002,2022-11-24,expense,178.33,USD,utilities,Internet service,Paper Depot,check
+EXP0003,2022-12-01,expense,1502.94,USD,rent,Office rent,AdReach,
+EXP0004,2024-01-29,expense,1432.83,USD,rent,Office rent,,cash
+EXP0005,2024-03-21,expense,651.42,USD,marketing,Online ads,AdReach,bank_transfer
+EXP0006,2024-08-16,expense,193.38,USD,supplies,Office supplies,Beehive Telecom,card
+EXP0007,2024-10-07,expense,49.78,USD,supplies,Office supplies,Summit Properties,bank_transfer
+EXP0008,2025-02-14,expense,111.96,USD,utilities,Electricity,Summit Properties,bank_transfer
+EXP0009,2025-03-07,expense,1774.33,USD,rent,Office rent,Notion,
+EXP0010,2025-04-10,expense,573.50,USD,marketing,Newsletter tool,Notion,bank_transfer
+EXP0011,2025-10-31,expense,63.39,USD,utilities,Internet service,Beehive Telecom,
+EXP0012,2026-03-06,expense,1567.89,USD,rent,Office rent,,other
