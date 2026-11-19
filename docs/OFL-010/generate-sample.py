@@ -20,7 +20,7 @@ CATEGORIES = {
         "other_revenue": (20, 500, ["Referral bonus", "Interest income"]),
     },
     "expense": {
-        "payroll": (1500, 400, ["Payroll run"]),
+        "payroll": (400, 1500, ["Payroll run"]),
         "rent": (1200, 1800, ["Office rent"]),
         "software": (10, 200, ["Project tool license", "Cloud hosting"]),
         "marketing": (50, 800, ["Online ads", "Newsletter tool"]),
