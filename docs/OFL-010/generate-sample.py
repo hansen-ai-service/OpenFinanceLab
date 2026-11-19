@@ -54,7 +54,7 @@ def generate(kind, n, rng, seen_keys):
         }
         # duplicate key from shcema: never create a duplicate record
         key = (row["transaction_date"], row["type"], row["category"],
-                row["amount"], row["category"], row["counterparty"])
+                row["description"], row["counterparty"], row["payment_method"])
         if key in seen_keys:
             continue
         seen_keys.add(key)
