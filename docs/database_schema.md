@@ -20,6 +20,8 @@ Stores the predefined transaction categories.
 
 Categories will be populated using the list defined in OFL-009.
 
+The combination of `id` and `type` also has a unique constraint. `id` is already unique, but PostgreSQL requires this so `transactions` can reference both columns in its composite foreign key.
+
 ### `transactions`
 
 Stores imported financial transactions.
@@ -29,10 +31,10 @@ Stores imported financial transactions.
 | `id` | UUID | Primary key |
 | `transaction_id` | VARCHAR(64) | Not null, unique |
 | `transaction_date` | DATE | Not null |
-| `type` | VARCHAR(10) | Not null, `revenue` or `expense` |
+| `type` | VARCHAR(10) | Not null, `revenue` or `expense`, part of composite foreign key |
 | `amount` | NUMERIC(14,2) | Not null, greater than 0 |
 | `currency` | CHAR(3) | Not null, `USD` only |
-| `category_id` | SMALLINT | Not null, foreign key |
+| `category_id` | SMALLINT | Not null, part of composite foreign key |
 | `description` | VARCHAR(255) | Nullable |
 | `counterparty` | VARCHAR(100) | Nullable |
 | `payment_method` | VARCHAR(20) | Nullable, must match OFL-009 options |
@@ -43,7 +45,7 @@ Stores imported financial transactions.
 
 - Each transaction references one category.
 - A category can be used by multiple transactions.
-- A transaction's type must match its category's type. This will be enforced with a composite foreign key.
+- A transaction's type must match its category's type. This is enforced with a composite foreign key on `(category_id, type)` referencing the unique `(id, type)` pair in `categories`.
 - Transaction IDs must be unique.
 - Amounts must be positive and use no more than two decimal places.
 - Required fields cannot be null.
